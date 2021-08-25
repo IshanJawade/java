@@ -1,15 +1,10 @@
 public class stackinJava{
 
-    public class stackImplementation{
-        int top;
-        int capacity;
-        int stack[];
+    class stackImplementation{
+        int top = -1;
+        int capacity = 10;
+        int arr[] = new int[capacity];
 
-        stackImplementation() {
-            top = -1;
-            capacity = 10;
-            int stack[] = new int[capacity];
-        }
         public boolean isEmpty() {
             return top == -1;
         }
@@ -22,7 +17,7 @@ public class stackinJava{
                 return 0;
             }
             else{
-                return stack[++top]=data;
+                return arr[++top]=data;
             }
         }
         public int pop () {
@@ -31,11 +26,11 @@ public class stackinJava{
                 return 0;
             }
             else {
-                return stack[--top];
+                return arr[--top];
             }
         }
         public int peek() {
-            return stack[top];
+            return arr[top];
         }
 
     }
@@ -46,6 +41,6 @@ public class stackinJava{
         st.push(145);
         st.push(1789);
         st.push(3434);
-        st.push(167);`
+        st.push(167);
     }
 }
