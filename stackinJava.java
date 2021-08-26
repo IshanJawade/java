@@ -1,6 +1,6 @@
 public class stackinJava{
 
-    class stackImplementation{
+    static class stackImplementation{
         int top = -1;
         int capacity = 10;
         int arr[] = new int[capacity];
@@ -35,12 +35,22 @@ public class stackinJava{
 
     }
     public static void main(String[] args) {
-        stackImplementation st = new stackImplementation();
-        st.push(10);
-        st.push(123);
-        st.push(145);
-        st.push(1789);
-        st.push(3434);
-        st.push(167);
+        
+            stackImplementation st = new stackImplementation();
+            st.push(10);
+            st.push(123);
+            st.push(145);
+            st.push(1789);
+            st.push(3434);
+            st.push(167);
+            System.out.println(st);
+            st.pop();
+            st.pop();
+            st.pop();
+            st.push(3000);
+            System.out.println(st.peek());
+            System.out.println(st.isEmpty());
+
+        
     }
 }
