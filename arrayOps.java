@@ -12,7 +12,6 @@ public class ArrayOps{
             input = new Scanner(System.in);
 
             int sum = 0;
-
             for (int i = 0; i < 5; i += 1){
 
                 sum += input.nextInt();
