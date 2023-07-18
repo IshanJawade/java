@@ -28,6 +28,8 @@ public class patterns {
     
         int l = avg,r = avg;
 
+        System.out.println(num +" X "+ avg );
+
         for( int i=1; i <= avg; i++){
             for( int j=1; j <= num; j++){
                 System.out.print((j == avg) || (j >= l && j <= r) ? "*" : " ");
