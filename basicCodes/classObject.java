@@ -4,7 +4,7 @@ class Employee{
     String empName;
     double empSalary;
     double bonus = 40000;
-    // Methods
+    // Methods = fucntions
     public double calSalary(){
         return empSalary + bonus;
     }
