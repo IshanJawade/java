@@ -14,10 +14,6 @@ public class arrayOps1{
         list1.add("You");
         list1.add("Ayushi");
         list1.add(" .");
-
-        list1.add(4, "Forever");
-        list1.set(1, "am adiicted to");
-
         list1.remove(5);
 
         System.out.println(list1);

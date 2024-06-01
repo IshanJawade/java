@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Account {
     private String AccName;
     private int AccNumber;
@@ -10,18 +12,12 @@ class Account {
     }
 
     public double credit(double amount){
-        if (amount < 0){
-            System.out.println("Operation unsuccessful!");
-            return 0;
-        }
-        else{
-            System.out.println("The Amount of Rs."+ amount + " is successfuly credited to the account.");
-            return AccBalance = AccBalance + amount;
-        }
+        System.out.println("The Amount of Rs."+ amount + " is successfuly credited to the account.");
+        return AccBalance = AccBalance + amount;
         
     }
 
-    public double deposite(double amount){
+    public double debit(double amount){
         if (amount > this.AccBalance){
             System.out.println("Operation unsuccessful!");
             return 0;
@@ -44,10 +40,32 @@ class Account {
 public class BankAcc {
     
      public static void main(String[] args) {
+        
         Account acc1 = new Account("Ishan Jawade", 24657394, 1000);
+        Scanner sc = new Scanner(System.in);
 
-        acc1.credit(3000);
-        acc1.deposite(5000);
-        acc1.AccDetails();
-     }
+        int num = 1;
+
+        while (num != 0) {
+            System.out.print("1. Credit \n2. Debit \n3. View Accout Details \n0. Logout\n>>");
+            num = sc.nextInt();
+            switch (num) {
+                case 1:
+                    System.out.print("Enter amount to be credited: ");
+                    int credAmount = sc.nextInt();
+                    acc1.credit(credAmount);
+                    break;
+                case 2:
+                    System.out.print("Enter amount to be debited: ");
+                    int debitAmount = sc.nextInt();
+                    acc1.debit(debitAmount);
+                    break;
+                case 3:
+                    acc1.AccDetails();
+                default:
+                    break;
+            }
+        }
+        sc.close();
+    }
 }
