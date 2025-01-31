@@ -8,10 +8,10 @@ public class Question {
 	private String opt2;
 	private String opt3;
 	private String opt4;
-	private String answer;
+	private int answer;
 
 	// contructor to initialize all the values in Question class
-	public Question(int id, String question, String opt1, String opt2, String opt3, String opt4, String answer) {
+	public Question(int id, String question, String opt1, String opt2, String opt3, String opt4, int answer) {
 		this.id = id;
 		this.question = question;
 		this.opt1 = opt1;
@@ -58,10 +58,10 @@ public class Question {
 	public void setOpt4(String opt4) {
 		this.opt4 = opt4;
 	}
-	public String getAnswer() {
+	public int getAnswer() {
 		return answer;
 	}
-	public void setAnswer(String answer) {
+	public void setAnswer(int answer) {
 		this.answer = answer;
 	}
 
