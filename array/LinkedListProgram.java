@@ -1,6 +1,4 @@
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.stream.Collectors;
+import java.util.*;
 
 public class LinkedListProgram {
 	interface IOperate {
