@@ -21,6 +21,7 @@ public class QuestionService {
 
 	public void playQuiz(){
 		int counter = 0;
+		Scanner sc = new Scanner(System.in);
 		// for each loop to print every question from array
 		for(Question q: questions){
 			System.out.print(q.getId()+" ");
@@ -29,11 +30,12 @@ public class QuestionService {
 			System.out.println(q.getOpt2());
 			System.out.print(q.getOpt3()+"\t");
 			System.out.println(q.getOpt4());
-			Scanner sc = new Scanner(System.in);
 			selection[counter] = sc.nextInt();
 			counter ++;
 		}
-		Score finalScore = new Score();
+		sc.close();
+		// pass current instance of this class to score class
+		Score finalScore = new Score(this);
 		System.out.println("Your Score: " + finalScore.calculateScore(selection));
 	}
 
