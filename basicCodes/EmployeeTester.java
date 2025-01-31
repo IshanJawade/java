@@ -20,7 +20,11 @@ class EmployeeService {
 public class EmployeeTester {
     public static void main(String[] args) {
 
-        Employee emp1 = new Employee(1000,"Ishan Jawade",3);
+        Employee emp1 = new Employee(
+            1000,
+            "Ishan Jawade",
+            3
+        );
         Employee emp2 = new Employee(1001,"Pratik kakade",3);
         Employee emp3 = new Employee(1002,"Rushiekesh Jadhav",3);
         Employee emp4 = new Employee(1003,"Ameya Kale",3);

@@ -1,19 +1,26 @@
+package basics;
 public class patterns {
-    public static void main(String args[]){
+    
+	static void halfPyramid(){
+        for(int i=1; i<=5; i++){
+            for(int j=1; j<=i; j++ ){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+	}
 
-
-        
-
-        // inverted half Piramid
+	static void invertedHalfPyramid(){
         for(int i = 5; i >= 1; i--){
             for(int j = 1; j <= i; j++){
                 System.out.print("*");
             }
             System.out.println();
         }
+	}
 
-        // Piramid
-        int num = 7; // only accepts odd numbers 
+	static void pyramid(){
+        int num = 11; // only accepts odd numbers 
         
         int avg = (num+1) / 2;
     
@@ -29,14 +36,11 @@ public class patterns {
             System.out.println();
         }
 
-    }
+		}
+		public static void main(String args[]){
+				halfPyramid();
+				invertedHalfPyramid();
+				pyramid();
+		}
 
-    void HalfPyramid(){
-        for(int i=1; i<=5; i++){
-            for(int j=1; j<=i; j++ ){
-                System.out.print("*");
-            }
-            System.out.println();
-        }
-    }
 }
